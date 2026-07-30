@@ -1,3 +1,3 @@
-export async function onRequest() {
-  return new Response("Functions is working");
+export function onRequest() {
+  return new Response("Functions OK");
 }
