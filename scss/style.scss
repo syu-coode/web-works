@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+@import "./reset";
+
+/* Break Point */
+$breakpoint_pc :1026px;
+$breakpoint_tab :1025px;
+$breakpoint_tab_sec :768px;
+$breakpoint_sp :480px;
+
+/* Color */
+$c_base: #c5a04a;
+$c_text: #333;
+
+// FOR COMMON
+$type: common;
+@import "_base";
+@import "_style";
+
+// FOR pc SIZE
+@media screen and (min-width: $breakpoint_pc) {
+  $type: pc;
+  @import "_base";
+  @import "_style";
+}
+
+// FOR tab SIZE
+@media screen and (max-width: $breakpoint_tab) {
+  $type: tab;
+  @import "_base";
+  @import "_style";
+}
+
+// FOR tab SIZE
+@media screen and (max-width: $breakpoint_tab_sec) {
+  $type: tab_sec;
+  @import "_base";
+  @import "_style";
+}
+
+// FOR SP SIZE
+@media screen and (max-width: $breakpoint_sp) {
+  $type: sp;
+  @import "_base";
+  @import "_style";
+}
