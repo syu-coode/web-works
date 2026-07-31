@@ -1,0 +1,163 @@
+/* =========================
+   Portfolio Auth Page
+========================= */
+
+.auth {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  background: radial-gradient(circle at top, #333, #111 60%);
+
+  color: #fff;
+}
+
+/* Card */
+
+.auth__box {
+  width: 100%;
+  max-width: 420px;
+
+  padding: 60px 50px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+/* Label */
+
+.auth__label {
+  margin-bottom: 25px;
+
+  font-size: 12px;
+
+  letter-spacing: 0.3em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Title */
+
+.auth__title {
+  margin-bottom: 20px;
+
+  font-size: 42px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.05em;
+}
+
+/* Description */
+
+.auth__text {
+  margin-bottom: 35px;
+
+  font-size: 14px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Form */
+
+.auth__form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+/* Input */
+
+.auth__input {
+  width: 100%;
+  height: 52px;
+
+  padding: 0 20px;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 10px;
+
+  color: #fff;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.auth__input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.auth__input:focus {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Button */
+
+.auth__button {
+  height: 52px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #fff;
+
+  color: #111;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.auth__button:hover {
+  opacity: 0.8;
+
+  transform: translateY(-2px);
+}
+
+/* Error */
+
+.auth__error {
+  margin-top: 20px;
+
+  font-size: 13px;
+
+  color: #ff8a8a;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 480px) {
+  .auth__box {
+    padding: 45px 25px;
+  }
+
+  .auth__title {
+    font-size: 34px;
+  }
+}
