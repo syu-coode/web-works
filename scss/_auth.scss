@@ -1,0 +1,127 @@
+#auth {
+  @if $type==common {
+    color: #333;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    background: #fff;
+    max-width: 1200px;
+    padding: 10% 4%;
+    margin: 0 auto;
+  }
+
+  @if $type==sp {
+    font-size: 4vw;
+  }
+
+  .auth-ttl {
+    @if $type == common {
+      text-align: center;
+    }
+  }
+
+  .auth-txt {
+    @if $type == common {
+      text-align: center;
+    }
+  }
+
+  .password-wrap {
+    @if $type == common {
+      display: flex;
+      justify-content: center;
+    }
+    .password-input {
+      @if $type == common {
+        width: 100%;
+        max-width: 180px;
+        padding: 7px 13px;
+        font-size: 30px;
+        color: #333;
+        background: #fff;
+        border: 1px solid #dcdcdc;
+        border-radius: 12px;
+        outline: none;
+        transition: all 0.25s ease;
+        box-sizing: border-box;
+      }
+
+      &::placeholder {
+        color: #aaa;
+      }
+
+      &:hover {
+        border-color: #b8b8b8;
+      }
+
+      &:focus {
+        border-color: #4f8cff;
+        box-shadow: 0 0 0 4px rgba(79, 140, 255, 0.15);
+      }
+
+      &:disabled {
+        background: #f5f5f5;
+        color: #999;
+        cursor: not-allowed;
+      }
+    }
+    .password-btn {
+      @if $type == common {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 90px;
+        padding: 14px 24px;
+        margin-left: 16px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        background: linear-gradient(135deg, #6366f1 0%, #4f8cff 100%);
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        box-shadow: 0 4px 12px rgba(79, 140, 255, 0.25);
+      }
+
+      &:hover {
+        @if $type == pc {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 20px rgba(79, 140, 255, 0.35);
+        }
+      }
+
+      &:active {
+        @if $type == common {
+          transform: translateY(0);
+          box-shadow: 0 3px 8px rgba(79, 140, 255, 0.2);
+        }
+      }
+
+      &:focus-visible {
+        @if $type == common {
+          outline: none;
+          box-shadow:
+            0 0 0 4px rgba(99, 102, 241, 0.2),
+            0 8px 20px rgba(79, 140, 255, 0.3);
+        }
+      }
+
+      &:disabled {
+        @if $type == common {
+          opacity: 0.6;
+          cursor: not-allowed;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .error {
+    @if $type == common {
+      color: #f91717;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}

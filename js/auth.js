@@ -19,7 +19,7 @@ function checkPassword() {
   } else {
 
     document.getElementById("error").textContent =
-      "パスワードが違います";
+      "パスワードが違います。再度入力してください。";
 
   }
 }

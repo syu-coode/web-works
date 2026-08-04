@@ -1,163 +1,175 @@
-/* =========================
-   Portfolio Auth Page
-========================= */
-
-.auth {
-  min-height: 100vh;
+/* Break Point */
+#auth {
+  color: #333;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  background: #fff;
+  max-width: 1200px;
+  padding: 10% 4%;
+  margin: 0 auto;
+}
+#auth .auth-ttl {
+  text-align: center;
+}
+#auth .auth-txt {
+  text-align: center;
+}
+#auth .password-wrap {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 20px;
-
-  background: radial-gradient(circle at top, #333, #111 60%);
-
-  color: #fff;
 }
-
-/* Card */
-
-.auth__box {
+#auth .password-wrap .password-input {
   width: 100%;
-  max-width: 420px;
-
-  padding: 60px 50px;
-
-  background: rgba(255, 255, 255, 0.05);
-
-  backdrop-filter: blur(20px);
-
-  border: 1px solid rgba(255, 255, 255, 0.2);
-
-  border-radius: 20px;
-
-  text-align: center;
-
-  box-sizing: border-box;
-}
-
-/* Label */
-
-.auth__label {
-  margin-bottom: 25px;
-
-  font-size: 12px;
-
-  letter-spacing: 0.3em;
-
-  color: rgba(255, 255, 255, 0.6);
-}
-
-/* Title */
-
-.auth__title {
-  margin-bottom: 20px;
-
-  font-size: 42px;
-
-  font-weight: 600;
-
-  letter-spacing: 0.05em;
-}
-
-/* Description */
-
-.auth__text {
-  margin-bottom: 35px;
-
-  font-size: 14px;
-
-  color: rgba(255, 255, 255, 0.6);
-}
-
-/* Form */
-
-.auth__form {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 15px;
-}
-
-/* Input */
-
-.auth__input {
-  width: 100%;
-  height: 52px;
-
-  padding: 0 20px;
-
-  box-sizing: border-box;
-
-  background: rgba(255, 255, 255, 0.08);
-
-  border: 1px solid rgba(255, 255, 255, 0.2);
-
-  border-radius: 10px;
-
-  color: #fff;
-
-  font-size: 15px;
-
-  outline: none;
-
-  transition: 0.3s;
-}
-
-.auth__input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.auth__input:focus {
-  border-color: rgba(255, 255, 255, 0.7);
-}
-
-/* Button */
-
-.auth__button {
-  height: 52px;
-
-  border: none;
-
-  border-radius: 10px;
-
+  max-width: 180px;
+  padding: 7px 13px;
+  font-size: 30px;
+  color: #333;
   background: #fff;
-
-  color: #111;
-
-  font-size: 15px;
-
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+#auth .password-wrap .password-input::-moz-placeholder {
+  color: #aaa;
+}
+#auth .password-wrap .password-input::placeholder {
+  color: #aaa;
+}
+#auth .password-wrap .password-input:hover {
+  border-color: #b8b8b8;
+}
+#auth .password-wrap .password-input:focus {
+  border-color: #4f8cff;
+  box-shadow: 0 0 0 4px rgba(79, 140, 255, 0.15);
+}
+#auth .password-wrap .password-input:disabled {
+  background: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+}
+#auth .password-wrap .password-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  padding: 14px 24px;
+  margin-left: 16px;
+  font-size: 16px;
   font-weight: 600;
-
+  color: #fff;
+  background: linear-gradient(135deg, #6366f1 0%, #4f8cff 100%);
+  border: none;
+  border-radius: 12px;
   cursor: pointer;
-
-  transition: 0.3s;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(79, 140, 255, 0.25);
+}
+#auth .password-wrap .password-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(79, 140, 255, 0.2);
+}
+#auth .password-wrap .password-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2), 0 8px 20px rgba(79, 140, 255, 0.3);
+}
+#auth .password-wrap .password-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+#auth .error {
+  color: #f91717;
+  text-align: center;
+  font-weight: bold;
 }
 
-.auth__button:hover {
-  opacity: 0.8;
-
-  transform: translateY(-2px);
+@media screen and (min-width: 1026px) {
+  #auth .password-wrap .password-input::-moz-placeholder {
+    color: #aaa;
+  }
+  #auth .password-wrap .password-input::placeholder {
+    color: #aaa;
+  }
+  #auth .password-wrap .password-input:hover {
+    border-color: #b8b8b8;
+  }
+  #auth .password-wrap .password-input:focus {
+    border-color: #4f8cff;
+    box-shadow: 0 0 0 4px rgba(79, 140, 255, 0.15);
+  }
+  #auth .password-wrap .password-input:disabled {
+    background: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+  }
+  #auth .password-wrap .password-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(79, 140, 255, 0.35);
+  }
 }
-
-/* Error */
-
-.auth__error {
-  margin-top: 20px;
-
-  font-size: 13px;
-
-  color: #ff8a8a;
+@media screen and (max-width: 1025px) {
+  #auth .password-wrap .password-input::-moz-placeholder {
+    color: #aaa;
+  }
+  #auth .password-wrap .password-input::placeholder {
+    color: #aaa;
+  }
+  #auth .password-wrap .password-input:hover {
+    border-color: #b8b8b8;
+  }
+  #auth .password-wrap .password-input:focus {
+    border-color: #4f8cff;
+    box-shadow: 0 0 0 4px rgba(79, 140, 255, 0.15);
+  }
+  #auth .password-wrap .password-input:disabled {
+    background: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+  }
 }
-
-/* Responsive */
-
+@media screen and (max-width: 768px) {
+  #auth .password-wrap .password-input::-moz-placeholder {
+    color: #aaa;
+  }
+  #auth .password-wrap .password-input::placeholder {
+    color: #aaa;
+  }
+  #auth .password-wrap .password-input:hover {
+    border-color: #b8b8b8;
+  }
+  #auth .password-wrap .password-input:focus {
+    border-color: #4f8cff;
+    box-shadow: 0 0 0 4px rgba(79, 140, 255, 0.15);
+  }
+  #auth .password-wrap .password-input:disabled {
+    background: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+  }
+}
 @media screen and (max-width: 480px) {
-  .auth__box {
-    padding: 45px 25px;
+  #auth {
+    font-size: 4vw;
   }
-
-  .auth__title {
-    font-size: 34px;
+  #auth .password-wrap .password-input::-moz-placeholder {
+    color: #aaa;
   }
-}
+  #auth .password-wrap .password-input::placeholder {
+    color: #aaa;
+  }
+  #auth .password-wrap .password-input:hover {
+    border-color: #b8b8b8;
+  }
+  #auth .password-wrap .password-input:focus {
+    border-color: #4f8cff;
+    box-shadow: 0 0 0 4px rgba(79, 140, 255, 0.15);
+  }
+  #auth .password-wrap .password-input:disabled {
+    background: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+  }
+}/*# sourceMappingURL=auth.css.map */
